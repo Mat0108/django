@@ -1,8 +1,46 @@
-* { background: grey;
-    background-color: grey;    
+* { 
+    background: rgb(70, 70, 80);
+    overflow: hidden;
+    clear: both;
 }
-
+.Ulabel{
+    text-align: center;
+    width: 100%;
+    font-size:x-large; 
+    color: white;
+    
+}
+.Udivlink{
+    width:137px;
+    margin: auto
+}
+.Ulink{
+    text-align: center;
+    width: 100%;
+    font-size:large; 
+    color: white;
+}
+.Udiv{
+    align-self: center;
+    height: 100%;
+    margin:auto;
+}
+.Udiv2{
+    align-self: center;
+    margin-top: 30px;
+}
 .Llabel{
-    width: 100px;
-    height: 100px
+    text-align: center;
+    width: 100%;
+    font-size:large; 
+    color: white;
+}
+.Ldivbutton{
+    width: 150px;
+    margin-left:48%;    
+}
+.Lbutton{
+    color: white;
+    font-size: medium;
+    
 }

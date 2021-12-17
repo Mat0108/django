@@ -5,27 +5,38 @@
         <link rel="stylesheet" href="{% static 'listings/styles.css' %}" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
-    <body style="background-color:grey">
-        <form action="login" method="post">
-        
-            {% csrf_token %}
-            
-        
-            {{ form.non_field_errors }}
-            <div class="fieldWrapper">
-                {{ form.mail.errors }}
-                <label style="width: 80px" for="{{ form.mail.id_for_label }}">Mail :</label>
-                {{ form.mail }}
+    <body>
+        <div class="Udiv">
+            {% for user2 in users %}
+            {{ user2.mail}}
+            {% endfor %}
+            <h2 style="text-align: center; color:white">Modifier ses informations</h2   >
+            <label class="Ulabel">Votre mail : {{user.mail}}</label>
+            <label class="Ulabel">Votre password: {{user.password}}</label>
+            {% if not bool  %}
+            <div class="Udivlink">
+                <a  class="Ulink" href="http://127.0.0.1:8000/">Modifier les infos </a>
             </div>
-            <div class="fieldWrapper">
-                {{ form.password.errors }}
-                <label  style="width: 80px" for="{{ form.password.id_for_label }}">Password :</label>
-                {{ form.password }}
-            </div>
-            <input type="submit" value="Modifier ses informations">
-        
+            {% endif %}
+            {% if bool %}
 
-    </form>
+                <div class="Udiv2" id="div2">
+                    <form action="" method="post">
+                        {% csrf_token %}          
+                        {{ form.non_field_errors }}
+                        <div class="fieldWrapper Llabel">
+                            {{ form.mail.errors }}
+                            <label style="width: 100px" for="{{ form.mail.id_for_label }}">Mail :</label>
+                            {{ form.mail }}
+                        </div>
+                        <div class="Ldivbutton">
+                            <input class = "Lbutton" type="submit" value="Mettre a jour">
+                        </div>
+                        
+                    </form>
+                </div>
+            {% endif %}
+        </div>  
     </body>
 
 

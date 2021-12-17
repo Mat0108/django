@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from listings import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('user/',views.edit_mail),
-    path('',views.get_name),
-    path('login/',views.get_name)
+    path('user/',views.user),
+    path('login/',views.get_name),
+    path('',views.modif)
 ]
