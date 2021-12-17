@@ -1,4 +1,4 @@
-# Test pour l'entreprise Ayomi
+# Test technique pour l'entreprise Ayomi
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
